@@ -1,0 +1,76 @@
+<?php
+
+namespace App\Console\Commands;
+
+use Illuminate\Console\Command;
+
+class TestCommand extends Command
+{
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'testCommand';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Command description';
+
+    /**
+     * Create a new command instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @return int
+     */
+    public function handle()
+    {
+        $demo = [
+            '2020年11月' => '[{"client_time":1605885188,"lon":120.291565,"lat":27.413345,"lv":5,"duration":2729,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1605156553,"lon":120.433441,"lat":27.523119,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1604744917,"lon":120.558189,"lat":27.578054,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1604984884,"lon":120.456139,"lat":27.507421,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1605112208,"lon":120.558266,"lat":27.577984,"lv":2,"duration":499,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1606213148,"lon":120.558662,"lat":27.580173,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1605971660,"lon":120.563248,"lat":27.582752,"lv":1,"duration":0,"country_code":"042","district_code":"330326","aoi":null,"poi":null},{"client_time":1604743632,"lon":120.554247,"lat":27.581389,"lv":9,"duration":1285,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1606318374,"lon":120.451942,"lat":27.53149,"lv":2,"duration":3,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1605444297,"lon":120.451584,"lat":27.525599,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1604744920,"lon":120.554245,"lat":27.581387,"lv":26,"duration":8770,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1604666528,"lon":120.554268,"lat":27.581375,"lv":2,"duration":7,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1605621832,"lon":120.602783,"lat":27.44244,"lv":2,"duration":1366,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1605138112,"lon":120.460999,"lat":27.526505,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1605157043,"lon":120.386627,"lat":27.502434,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1605623419,"lon":120.451805,"lat":27.531607,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1606143133,"lon":120.554726,"lat":27.583511,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1605896970,"lon":120.291565,"lat":27.413345,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1605274436,"lon":120.609253,"lat":27.434332,"lv":2,"duration":82,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1605895780,"lon":120.446808,"lat":27.526289,"lv":2,"duration":4,"country_code":"042","district_code":"330327","aoi":null,"poi":{"id":"7WPG8hZ8sty","name":"胖妹面馆","distance":15.75360575879129}},{"client_time":1604931676,"lon":120.55825,"lat":27.577997,"lv":2,"duration":1092,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1606321334,"lon":120.451942,"lat":27.53149,"lv":2,"duration":63,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1605625019,"lon":120.602783,"lat":27.44244,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1606153855,"lon":120.554726,"lat":27.583511,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1605799826,"lon":120.291565,"lat":27.413345,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1605117027,"lon":120.558266,"lat":27.577984,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null}]',
+            '2020年12月' => '[{"client_time":1608487231,"lon":120.367928,"lat":27.477409,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1608973516,"lon":120.367981,"lat":27.477468,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1609149235,"lon":120.601746,"lat":27.428726,"lv":2,"duration":308,"country_code":"042","district_code":"330327","aoi":null,"poi":{"id":"7SkFzy5gwpk","name":"金城豪庭","distance":11.114652468053546}},{"client_time":1607166116,"lon":120.403732,"lat":27.512362,"lv":2,"duration":3287,"country_code":"042","district_code":"330327","aoi":null,"poi":{"id":"7RXvdGFJzcC","name":"开瑞汽车","distance":6.989792620776612}},{"client_time":1608918678,"lon":120.421028,"lat":27.556648,"lv":2,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1608385968,"lon":120.422714,"lat":27.5228,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":{"id":"5PuX5j1A2Yq","name":"上江小区","distance":224.87423971727983},"poi":{"id":"87Yx4Loq2wg","name":"斑马摄影工作室","distance":22.643647556195123}},{"client_time":1608038142,"lon":120.61718,"lat":27.4284,"lv":3,"duration":82,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1606752091,"lon":120.456123,"lat":27.528456,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1608918738,"lon":120.416664,"lat":27.55966,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1609162824,"lon":120.601746,"lat":27.428726,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":{"id":"7SkFzy5gwpk","name":"金城豪庭","distance":11.114652468053546}},{"client_time":1609137836,"lon":120.536484,"lat":27.515696,"lv":4,"duration":214,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1607873522,"lon":120.61718,"lat":27.4284,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1608996808,"lon":120.367981,"lat":27.477468,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1608042896,"lon":120.61718,"lat":27.4284,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1608653643,"lon":120.36792,"lat":27.477427,"lv":2,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1606922189,"lon":120.555702,"lat":27.58205,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1608693018,"lon":120.424927,"lat":27.512207,"lv":2,"duration":14,"country_code":"042","district_code":"330327","aoi":{"id":"5PuX5ixevWh","name":"怡和城市家园","distance":126.37061437672403},"poi":null},{"client_time":1609237021,"lon":120.601654,"lat":27.428303,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1608553728,"lon":120.36792,"lat":27.477406,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1608651959,"lon":120.36792,"lat":27.477427,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1606752127,"lon":120.555618,"lat":27.582207,"lv":4,"duration":3122,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1609246417,"lon":120.601654,"lat":27.428303,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1608465998,"lon":120.367928,"lat":27.477409,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1608511721,"lon":120.551353,"lat":27.542297,"lv":2,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1609059498,"lon":120.601746,"lat":27.428726,"lv":2,"duration":1539,"country_code":"042","district_code":"330327","aoi":null,"poi":{"id":"7SkFzy5gwpk","name":"金城豪庭","distance":11.114652468053546}},{"client_time":1607847150,"lon":120.416901,"lat":27.5355,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1607183528,"lon":120.543427,"lat":27.508982,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":{"id":"7dfGPcG5V8a","name":"卖自行车的","distance":4.244044311489315}},{"client_time":1608747296,"lon":120.421028,"lat":27.556648,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1609327313,"lon":120.604546,"lat":27.438131,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":{"id":"5PuX5aZTF2Z","name":"涌金花苑小区","distance":104.45541372895634},"poi":null},{"client_time":1608886215,"lon":120.422249,"lat":27.502354,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null}]',
+            '2021年01月' => '[{"client_time":1609750523,"lon":120.466423,"lat":27.51322,"lv":2,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1610196201,"lon":120.332466,"lat":27.460398,"lv":3,"duration":8976,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1609846027,"lon":120.475571,"lat":27.518959,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1610549732,"lon":120.577705,"lat":27.489429,"lv":6,"duration":7,"country_code":"042","district_code":"330327","aoi":{"id":"5PuX5Zht2o1","name":"黄龙锦园","distance":30.285918566535848},"poi":null},{"client_time":1612076042,"lon":120.436501,"lat":27.525238,"lv":14,"duration":541,"country_code":"042","district_code":"330327","aoi":{"id":"5PuX5iuQpqF","name":"绿都花城(A组团)","distance":10.51325448830412},"poi":{"id":"5PuX5iuQpqF","name":"绿都花城(A组团)","distance":9.018642699411009}},{"client_time":1609521972,"lon":120.61013,"lat":27.423241,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1609838647,"lon":120.475571,"lat":27.518959,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1609937995,"lon":120.451485,"lat":27.532032,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1610364354,"lon":120.550911,"lat":27.582092,"lv":1,"duration":7394,"country_code":"042","district_code":"330327","aoi":null,"poi":{"id":"EP8f289a23bae7","name":null,"distance":9.09136586030716}},{"client_time":1610086147,"lon":120.452415,"lat":27.52792,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1610026060,"lon":120.447182,"lat":27.535084,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1609724817,"lon":120.400017,"lat":27.526449,"lv":3,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1609763548,"lon":120.470665,"lat":27.510124,"lv":2,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1609775040,"lon":120.329178,"lat":27.45956,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1610637461,"lon":120.577705,"lat":27.489429,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":{"id":"5PuX5Zht2o1","name":"黄龙锦园","distance":30.285918566535848},"poi":null},{"client_time":1610453351,"lon":120.551521,"lat":27.580978,"lv":2,"duration":15,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1611767733,"lon":120.606232,"lat":27.429239,"lv":5,"duration":176,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1610464571,"lon":120.551521,"lat":27.580978,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1610187225,"lon":120.332466,"lat":27.460398,"lv":3,"duration":35778,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1610356960,"lon":120.41497,"lat":27.511784,"lv":1,"duration":1,"country_code":"042","district_code":"330327","aoi":{"id":"5PuX5j3P1UW","name":"新建小区","distance":69.58754171400395},"poi":{"id":"7dfGPmk6tgc","name":"阿春制衣","distance":5.747097590381571}},{"client_time":1610375396,"lon":120.550911,"lat":27.582092,"lv":1,"duration":11042,"country_code":"042","district_code":"330327","aoi":null,"poi":{"id":"EP8f289a23bae7","name":null,"distance":9.09136586030716}},{"client_time":1610521190,"lon":120.577705,"lat":27.489429,"lv":2,"duration":472,"country_code":"042","district_code":"330327","aoi":{"id":"5PuX5Zht2o1","name":"黄龙锦园","distance":30.285918566535848},"poi":null},{"client_time":1612103756,"lon":120.436501,"lat":27.525238,"lv":1,"duration":0,"country_code":"042","district_code":"330327","aoi":{"id":"5PuX5iuQpqF","name":"绿都花城(A组团)","distance":10.51325448830412},"poi":{"id":"5PuX5iuQpqF","name":"绿都花城(A组团)","distance":9.018642699411009}},{"client_time":1609753502,"lon":120.470665,"lat":27.510124,"lv":5,"duration":0,"country_code":"042","district_code":"330327","aoi":null,"poi":null},{"client_time":1610151447,"lon":120.332466,"lat":27.460398,"lv":3,"duration":1,"country_code":"042","district_code":"330327","aoi":null,"poi":null}]'];
+
+        foreach ($demo as $item) {
+            $data = json_decode($item, true);
+            foreach ($data as $value) {
+                //var_dump($value['lon']);
+                $this->address($value['lon'], $value['lat']);
+            }
+
+        }
+        return 0;
+    }
+
+    function address($lng,$lat){
+        // $lng = '121.44836960129';
+        // $lat = '31.183873508958';
+        $url = 'http://api.map.baidu.com/geocoder/v2/?location='.$lat.','.$lng.'&output=json&pois=1&ak=erYKBghl7L2RxpHlsThEqXi0yyojaGDq';
+        $result = file_get_contents($url);
+        $result = json_decode($result['content'],true);
+        // var_dump($result);exit;
+        $arr = array();
+        $arr['country'] = $result['result']['addressComponent']['country'];
+        $arr['province'] = $result['result']['addressComponent']['province'];
+        $arr['city'] = $result['result']['addressComponent']['city'];
+        $arr['district'] = $result['result']['addressComponent']['district'];
+        $arr['address'] = $result['result']['formatted_address'];
+        $arr['business'] = $result['result']['business'];
+        var_dump($arr);exit;
+        return $arr;
+
+    }
+
+
+}
